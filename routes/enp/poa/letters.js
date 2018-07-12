@@ -102,7 +102,7 @@ makeSourceStatistics = (aimData, num) => {
 
 makeTodayLvHotspot(today_lv_hotspot, 10);
 makeGetLettersSSResult(getLettersSSResult, 10);
-makeGetLettersTSResult(getLettersTSResult, 10);
+makeGetLettersTSResult(getLettersTSResult, 7);
 makeComplaintComplaintList(ComplaintComplaintList, 10);
 makeStat30DaysPollutionCategory(stat30DaysPollutionCategory, 5);
 makeStat30dayscounty(stat30dayscounty, 10);
