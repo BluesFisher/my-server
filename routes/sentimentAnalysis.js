@@ -91,15 +91,19 @@ makeSentimentRankData(sentimentRankData, 8);
 router.get('/exampleData', function(req, res, next) {
 	res.json(Mock.mock({
 		"code": 1,
-		suddenEventsData,
+		"msg": null,
+		"data": { suddenEventsData, }
 	}));
 });
 
 router.get('/newsData', function(req, res, next) {
 	res.json(Mock.mock({
 		"code": 1,
-		hotSubjectsData,
-		sentimentRankData,
+		"msg": null,
+		"data": {
+			hotSubjectsData,
+			sentimentRankData,
+		}
 	}));
 });
 

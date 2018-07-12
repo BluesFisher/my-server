@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 const pollutionMonitor = require('./routes/pollutionMonitor');
 const sentimentAnalysis = require('./routes/sentimentAnalysis');
+const letters = require('./routes/env/poa/letters');
+const common = require('./routes/env/poa/common');
+const news = require('./routes/env/poa/news');
 
 var app = express();
 
@@ -31,6 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/pollutionMonitor', pollutionMonitor);
 app.use('/sentimentAnalysis', sentimentAnalysis);
+app.use('/env/poa/letters', letters);
+app.use('/env/poa/common', common);
+app.use('/env/poa/news', news);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

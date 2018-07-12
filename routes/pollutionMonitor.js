@@ -86,12 +86,15 @@ makeEnterpriseCreditRank(enterpriseCreditRank, 8);
 router.get('/exampleData', function(req, res, next) {
 	res.json(Mock.mock({
 		"code": 1,
-		suspicousEnterpriseRank,
-		newsDetail,
-		waterFactoryRankData,
-		waterRankData,
-		airRankData,
-		enterpriseCreditRank,
+		"msg": null,
+		"data": {
+			suspicousEnterpriseRank,
+			newsDetail,
+			waterFactoryRankData,
+			waterRankData,
+			airRankData,
+			enterpriseCreditRank,
+		}
 	}));
 });
 
