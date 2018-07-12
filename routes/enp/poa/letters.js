@@ -105,7 +105,7 @@ makeGetLettersSSResult(getLettersSSResult, 10);
 makeGetLettersTSResult(getLettersTSResult, 10);
 makeComplaintComplaintList(ComplaintComplaintList, 10);
 makeStat30DaysPollutionCategory(stat30DaysPollutionCategory, 5);
-makeStat30DaysPollutionCategory(stat30dayscounty, 10);
+makeStat30dayscounty(stat30dayscounty, 10);
 makeSourceStatistics(sourcestatistics, 5);
 
 router.post('/today_lv_hotspot', function(req, res, next) {
