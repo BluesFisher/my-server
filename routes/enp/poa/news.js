@@ -122,14 +122,5 @@ router.post('/today_hot_topic', function(req, res, next) {
 	}));
 });
 
-router.post('/30today_hot_topic', function(req, res, next) {
-	console.log(req);
-	res.json(Mock.mock({
-		"code": 0,
-		"msg": null,
-		"data": overview
-	}));
-});
-
 
 module.exports = router;

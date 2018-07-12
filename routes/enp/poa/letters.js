@@ -3,13 +3,7 @@ const Random = Mock.Random;
 const express = require('express');
 const router = express.Router();
 
-let stat30DaysPollutionCategory = [
-	{
-		"pollutionCategory": "大气污染",
-		"num": 143
-	},
-];
-
+let stat30DaysPollutionCategory = [];
 let stat30DaysHandlingStatistics = {
 	"complaintSum": Random.string('number', 2, 3),
 	"transactSum":  Random.string('number', 2, 3),
@@ -17,65 +11,18 @@ let stat30DaysHandlingStatistics = {
 	"annularCompare": Random.string('number', 1, 2) + "%",
 };
 
-let stat30dayscounty = [
-	{
-		"countyname": "金牛防水有限公司位于安徽省",  //投诉企业名称
-		"num": "20"                          //处理数量
-	}
-];
-
-let sourcestatistics = [
-	{
-		"source": "滁州人民政府",  //信访来源名称
-		"num": "60",               //信访数量
-	}
-];
-
-let ComplaintComplaintList = [
-	{
-		"id": "41412431",  //主键唯一数据标识
-		"plid ": "34qazwsx789",  //信访事件ID
-		"title": "污染严重",  //信访投诉标题
-		"ptttime": "2018/07/11",  //信访投诉时间
-		"pollutionCategory": "土壤",  //污染类别
-		"status": "已办理",  //办理状态
-		"transactUnit": "",  //办理单位
-		"source": "",  //来源
-	}
-];
-
-let getLettersTSResult = [
-	{
-		"ptttime": "2018/06/14",  //来信时间
-		"url": "http://t.cn/Rz0kPkp",  //新闻url
-		"pollutionCategory": "烟尘",   //原因
-		"transactUnit": "来安县环境保护局",  //办理单位
-		"status": "不受理",     //办理状态
-		"samecount":20,      //相似内容数量
-		"content": "企业排放黑色烟雾"   //内容
-	}
-];
-
-let getLettersSSResult = [
-	{
-		"company": "金牛防水公司",    //涉事公司
-		"tscount":188,      //被投诉量
-		"completedcount": 98     //处理量
-	}
-];
-
-let today_lv_hotspot = [
-	{
-		"url": "url",  //链接
-		"title": "title"  //标题
-	}
-];
+let stat30dayscounty = [];
+let sourcestatistics = [];
+let ComplaintComplaintList = [];
+let getLettersTSResult = [];
+let getLettersSSResult = [];
+let today_lv_hotspot = [];
 
 makeTodayLvHotspot = (aimData, num) => {
 	for (let i = 0; i < num; i++) {
 		let demo = {
 			"url": Random.url(),  //链接
-			"title": Random.ctitle(6, 10)  //标题
+			"title": Random.ctitle(10, 20)  //标题
 		};
 		aimData.push(demo);
 	}
