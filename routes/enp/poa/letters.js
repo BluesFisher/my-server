@@ -94,7 +94,7 @@ makeSourceStatistics = (aimData, num) => {
 	for (let i = 0; i < num; i++) {
 		let demo = {
 			"source": Random.cword(4, 9),
-			"num": Random.string('number', 1, 3),
+			"num": Random.string('number', 1, 2),
 		};
 		aimData.push(demo);
 	}
@@ -109,7 +109,6 @@ makeStat30dayscounty(stat30dayscounty, 10);
 makeSourceStatistics(sourcestatistics, 5);
 
 router.post('/today_lv_hotspot', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -118,7 +117,7 @@ router.post('/today_lv_hotspot', function(req, res, next) {
 });
 
 router.post('/getLettersSSResult', function(req, res, next) {
-	console.log(req);
+	console.log(req.body);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -129,7 +128,6 @@ router.post('/getLettersSSResult', function(req, res, next) {
 });
 
 router.post('/getLettersTSResult', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -143,7 +141,6 @@ router.post('/getLettersTSResult', function(req, res, next) {
 });
 
 router.post('/ComplaintComplaintList', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -154,7 +151,6 @@ router.post('/ComplaintComplaintList', function(req, res, next) {
 });
 
 router.post('/stat30DaysPollutionCategory', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -165,7 +161,6 @@ router.post('/stat30DaysPollutionCategory', function(req, res, next) {
 });
 
 router.post('/stat30DaysHandlingStatistics', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -174,7 +169,6 @@ router.post('/stat30DaysHandlingStatistics', function(req, res, next) {
 });
 
 router.post('/stat30dayscounty', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -185,7 +179,6 @@ router.post('/stat30dayscounty', function(req, res, next) {
 });
 
 router.post('/source-statistics', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,

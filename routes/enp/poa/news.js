@@ -33,7 +33,7 @@ makeStat30DaysClassifyBillboard = (aimData, num) => {
 makeStat30DaysTrendBillboard = (aimData, num) => {
 	for (let i = 0; i < num; i++) {
 		let demo = {
-			"puttime": Random.datetime('yyyy-MM-dd'),  //新闻日期
+			"tubtime": Random.datetime('yyyy-MM-dd'),  //新闻日期
 			"poCount": Random.integer(1, 300),                          //新闻数量
 		};
 		aimData.push(demo);
@@ -70,7 +70,6 @@ makeStat30DaysCountyBillboard(stat30DaysCountyBillboard, 10);
 makeTodayHotTopic(today_hot_topic, 10);
 
 router.post('/stat30DaysPopWord', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -79,7 +78,6 @@ router.post('/stat30DaysPopWord', function(req, res, next) {
 });
 
 router.post('/stat30DaysClassifyBillboard', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -91,7 +89,6 @@ router.post('/stat30DaysClassifyBillboard', function(req, res, next) {
 });
 
 router.post('/stat30DaysTrendBillboard', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -100,7 +97,6 @@ router.post('/stat30DaysTrendBillboard', function(req, res, next) {
 });
 
 router.post('/stat30DaysCountyBillboard', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
@@ -109,7 +105,6 @@ router.post('/stat30DaysCountyBillboard', function(req, res, next) {
 });
 
 router.post('/30today_hot_topic', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,

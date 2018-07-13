@@ -12,7 +12,6 @@ let overview = {
 };
 
 router.post('/overview', function(req, res, next) {
-	console.log(req);
 	res.json(Mock.mock({
 		"code": 0,
 		"msg": null,
