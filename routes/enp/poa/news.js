@@ -33,7 +33,7 @@ makeStat30DaysClassifyBillboard = (aimData, num) => {
 makeStat30DaysTrendBillboard = (aimData, num) => {
 	for (let i = 0; i < num; i++) {
 		let demo = {
-			"tubtime": Random.datetime('yyyy-MM-dd'),  //新闻日期
+			"pubtime": Random.datetime('yyyy-MM-dd'),  //新闻日期
 			"poCount": Random.integer(1, 300),                          //新闻数量
 		};
 		aimData.push(demo);
